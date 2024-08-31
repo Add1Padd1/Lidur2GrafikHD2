@@ -16,7 +16,7 @@ var center = vec2(0, 0);
 
 var points = [];
 
-window.onload = function init() {
+function init() {
   canvas = document.getElementById('gl-canvas');
 
   gl = WebGLUtils.setupWebGL(canvas);
@@ -49,8 +49,9 @@ window.onload = function init() {
   };
 
   render();
-};
+}
 
+window.onload = init;
 // Create the points of the circle
 function createCirclePoints(cent, rad, k) {
   points = [];
